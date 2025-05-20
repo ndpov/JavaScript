@@ -1,0 +1,181 @@
+<html>
+    <script>
+    function validate()
+    {
+        var msg;
+        
+        var uname=document.f.user.value.length;
+    
+        if(uname==null||uname<5)
+        {
+            msg="Please Enter Valid Name";
+            
+            }
+            else 
+            {
+              msg="You Entered Correct Name";
+            }
+    
+            document.getElementById('mylocation').innerText=msg;
+    }
+    function validate1()
+    {
+        var msg;
+        var last=document.f.lname.value.length;
+        if(last==null||last<5)
+        {
+            msg="Please Enter Valid LastName";
+            }
+            else 
+            {
+                msg="Valid LastName";
+            }
+    
+            document.getElementById('lastname').innerText=msg;
+    }
+    function validate2()
+    {
+        var msg;        
+        var mail1=document.f.mail.value;
+            var at=mail1.indexOf("@");
+            var dot=mail1.lastIndexOf(".");
+        if(at<1||dot<at+2||dot+2>=mail1.length)
+        {
+            msg="Please Enter valid MailId";
+            }
+            else 
+            {
+                msg="Valid MailId";
+            }
+    
+            document.getElementById('mailid').innerText=msg;
+    }
+       function validate3()
+    {
+        var msg;
+        var pw=document.f.pass.value;
+        var p=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,10}/;
+        if(!(pw.match(p)&& pw.length==10))
+        {
+            msg="POOR";
+            }
+            else if(pw>8) 
+            {
+                msg="GOOD";
+            }
+            else{
+                msg="Strong";
+            }
+    
+            document.getElementById('password').innerText=msg;
+    
+        var cpw=document.f.cpass.value.length;
+        if(cpw==pw)
+        {
+            msg="Passwords are matched";
+            }
+            
+            else{
+                msg="Passwords are not Same";
+            }
+    
+            document.getElementById('cpassword').innerText=msg;
+    }
+    function validate4()
+    {
+        var msg;
+        var mobile=document.f.num.value;
+        var a=/[6,7,8,9]+[0-9]{9}/; //var a=/[^7,8,9]+[0-9]{9}/---->It will display the numbers except 7,8,9
+        if(!(mobile.match(a) &&mobile.length==10))
+        {
+            msg="Invalid mobile number";
+            }
+            else 
+            {
+                msg="Valid";
+            }
+    
+            document.getElementById('mob').innerText=msg;
+    }
+    function validate6()
+    {
+        var msg;
+        var gender=document.f.gender.value;
+        if(gender=="")
+        {
+            msg="Please Select Your gender";
+            }
+            else 
+            {
+                msg="Entered gender";
+            }
+    
+            document.getElementById('gen').innerText=msg;
+    }
+    function validate5()
+    {
+        var msg;
+        var pan=document.f.pan.value.length;
+        if(pan==null||pan<10)
+        {
+            msg="Please Enter Valid Pan Number";
+            }
+            else 
+            {
+                msg="Valid";
+            }
+    
+            document.getElementById('p').innerText=msg;
+    }
+    function validate6()
+    {
+        var msg;
+        var zip=document.f.pin.value.length;
+        if(zip==null||zip<6)
+        {
+            msg="Please Enter valid ZipCode Which contains 6 digits";
+            }
+            else 
+            {
+                msg="Valid";
+            }
+    
+            document.getElementById('pincode').innerText=msg;
+    }
+    </script>
+    <body style="text-align:center;background:url(1.jpg)">
+    <form name="f" method="post" action="banklogin.html" onclick="return validate()">
+
+            <h1 style="background-color:whitesmoke;"> <marquee direction="left">REGISTRATION PAGE</marquee></h1>
+            <div class="box">
+                 <img src="bgr1.png">            
+             </div> 
+        <table>
+        <tr><td>UserName:</td><td><input type="text" name="user" onkeyup="validate()" required>
+        <p id="mylocation" style="color:red"></p></td></tr>
+        <tr><td>LastName:</td><td><input type="text" name="lname" onkeyup="validate1()" required>
+        <p id="lastname" style="color:red"></p></td></tr>
+         <tr><td>Mail Id:</td><td><input type="email" name="mail" onkeyup="validate2()" required>
+        <p id="mailid" style="color:red"></p></td></tr> 
+        <tr><td>Password:</td><td><input type="password" name="pass" onkeyup="validate3()" required>
+        <p id="password" style="color:red"></p></td></tr>
+        <tr><td>Confirm Password:</td><td><input type="password" name="cpass" onkeyup="validate3()" required>
+        <p id="cpassword" style="color:red"></p></td></tr>
+        <tr><td>Phone:</td><td><input type="text" name="num" onkeyup="validate4()" required>
+        <p id="mob" style="color:red"></p></td></tr>
+        <tr><td>Gender</td>
+        <td><input type="radio" name="gender" required>Male
+    <input type="radio" name="gender" required>female
+<input type="radio" name="gender" required>Others
+<p id="gen" style="color:red" onkeyup="validate6()"></p></td></tr>
+        <tr><td>Pan:</td><td><input type="number" name="pan" onkeyup="validate5()" required>
+        <p id="p" style="color:red"></p></td></tr>
+        <tr><td>ZipCode:</td><td><input type="number" name="pin" onkeyup="validate6()" required>
+            <p id="pincode" style="color:red"></p></td></tr>
+        <tr><td><input type="submit" value="submit"></td>
+        <td><input type="Submit" value="cancel"/></td>
+        <td><a href="#">Already a Member?</a></td></form></tr>
+        </table>
+    </form>
+    </body>
+</html>

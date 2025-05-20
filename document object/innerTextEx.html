@@ -1,0 +1,23 @@
+<script type="text/javascript" >  
+function validate() {  
+var msg;  
+var output=document.myForm.userPass.value.length;
+if(output>7){  
+msg="very strong";  
+}  
+else if(output>5){  
+msg="Good";  
+}  
+else{
+msg="Poor";
+}
+document.getElementById('mylocation').innerText=msg;
+//innerText for plain text
+//innerHTML for html format text  
+ }  
+  
+</script>  
+<form name="myForm">  
+<input type="password"  name="userPass" onkeyup="validate()">  
+Strength:<p id="mylocation">no strength</p>  
+</form>  

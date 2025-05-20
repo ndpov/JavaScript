@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function getEventType(event) { 
+    document.getElementById("demo").innerHTML = event.type;
+}
+</script>
+</head>
+
+<body>
+
+<p onmousedown="getEventType(event)">
+Click on this paragraph. A message will tell what type of event was triggered.</p>
+
+<p id="demo"></p>
+
+</body>
+</html>

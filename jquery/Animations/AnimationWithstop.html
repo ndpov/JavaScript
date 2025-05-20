@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Stop Currently Running Animations</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<style type="text/css">
+    img{position: relative; /* Required to move element */}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".start-btn").click(function(){
+      $("img").animate({left: "+=150px"}, 2000);});
+    $(".stop-btn").click(function(){
+      $("img").stop();});
+    $(".back-btn").click(function(){
+      $("img").animate({left: "-=150px"}, 2000);});
+     $(".reset-btn").click(function(){
+      $("img").animate({left: "0"},1000);});});</script></head>
+<body>
+    <button type="button" class="start-btn">Start</button>
+    <button type="button" class="stop-btn">Stop</button>
+    <button type="button" class="back-btn">Back</button>
+    <button type="button" class="reset-btn">Reset</button>
+    <p> 	<img src="mushroom.jpg" alt="Mushroom">
+    </p></body>
+</html>                                		                            

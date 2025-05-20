@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+    var x = document.getElementsByClassName("welcome");
+    x[0].style.backgroundColor = "red";
+	 x[1].style.backgroundColor = "blue";
+}
+</script>
+</head>
+<body>
+<p class="welcome">Click the button to change the background color of the first div element with the classes "example" and "color".</p>
+<button onclick="myFunction()">Try it</button>
+<p class="welcome">The getElementsByClassName() method is not supported in Internet Explorer 8 and earlier versions.</p>
+</body>
+</html>

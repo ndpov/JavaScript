@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Age Calculator</title>
+	<script>
+	//var year=document.getElmentById("y").value;
+	//var month=document.getElmentById("m").value;
+	//var day=document.getElmentById("d").value;
+	function GetAge(year, month, day)
+{
+	var now = new Date();	
+	var age = now.getFullYear() - year;
+	var mdif = now.getMonth() - month + 1; //0=jan	
+	if(mdif < 0)
+	{
+		--age;
+	}
+	else if(mdif == 0)
+	{
+		var ddif = now.getDate() - day;
+		
+		if(ddif < 0)
+		{
+			--age;
+		}
+	}
+	window.alert(age);
+}
+	</script>
+</head>
+<body>
+  <form onsubmit="GetAge(document.getElmentById('y').value,document.getElmentById('m').value),document.getElmentById('d').value">
+            <h2>Select Birth Date</h2>
+          Year :  <input type="number" id="y">
+		  month: <input type="number" id="m">
+		  day  :<input type="number" id="d">
+		  
+		  <input type="submit" value="GetAge">
+  </form>
+</body>
+</html>

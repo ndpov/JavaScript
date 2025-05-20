@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript Specify Alternative Version of a Pattern in a Regular Expression</title>
+</head>
+<body>
+    <script>    
+    var regex = /fox|dog|cat/;
+    var str = "The quick brown fox jumps over the lazy dog.";
+    var matches = str.match(regex);
+    document.write("Matches the substring: " + matches);
+    
+    console.log(matches);
+    // expected output: ["fox", index: 16, ...]
+    </script>
+</body>
+</html>                            

@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function addition1()
+{
+//document.formname.fieldname.value
+//var a1= document.f1.num1.value;
+//var b1= document.f1.num2.value;
+var a1=document.getElementById("fnum").value;
+var b1=document.getElementById("snum").value;
+var c=parseInt(a1)+parseInt(b1);
+alert("additon of two numbers is :"+c); 
+}	
+</script>
+</head>    
+    <body>
+ <form name="f1" onsubmit="addition1()">
+First Number :<input type="number" name="num1" id="fnum"><br><br>
+Second NUmber :<input type="number" name="num2" id="snum"><br><br>
+ <input type="submit" value="ADDITION">
+ </form>
+    </body>
+</html>
