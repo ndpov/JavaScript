@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--This is the First Section:-->
+<p id="myP1">This is some text.</p>
+<!--This is the Second Section: -->
+<p id="myP2">This is some text.</p>
+
+<input type="button" onclick="demoDisplay()" value="Hide text with display property">
+<input type="button" onclick="demoVisibility()" value="Hide text with visibility property">
+<input type="button" onclick="showDisplay()" value="show text with display property">
+
+<input type="button" onclick="showVisibility()" value="show text with visibility property">
+<script>
+
+function demoDisplay() {
+    document.getElementById("myP1").style.display = "none";
+}
+
+function demoVisibility() {
+    document.getElementById("myP2").style.visibility = "hidden";
+}
+function showDisplay() {
+    document.getElementById("myP1").style.display = "block";
+}
+function showVisibility() {
+    document.getElementById("myP2").style.visibility = 'visible';
+}
+
+
+</script>
+
+</body>
+</html>

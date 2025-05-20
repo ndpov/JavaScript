@@ -1,0 +1,6 @@
+	
+	?       The question mark indicates zero or one occurrences of the preceding element.
+	*	The asterisk indicates zero or more occurrences of the preceding element.
+	+	The plus sign indicates one or more occurrences of the preceding element. 
+	[^0-9]	Find any character NOT between the brackets
+

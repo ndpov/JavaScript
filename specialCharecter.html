@@ -1,0 +1,30 @@
+
+<html>
+<head>
+<script type="text/javascript">
+function valid()
+{
+var regex1=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,}/
+var x=document.myform.name.value;
+//var a=/[a-z]+[a-z]*@gmail.com/;
+//var a=/[0-9]{10}/;
+
+
+if(x.match(regex1) && x.length<=10)
+{
+alert("valid");
+}
+else
+{
+alert("invalid");
+}
+}
+</script>
+</head>
+<body>
+<form name=myform>
+<input type="text" name="name">
+<input type="submit" onclick="valid()"/>
+</form>
+</body>
+</html>
