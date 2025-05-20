@@ -1,0 +1,19 @@
+<html>
+<script>
+function valid()
+{
+var uname=document.myform.num.value;
+if(isNaN(uname)||uname==null||uname=="")
+{
+alert("plz enter only intergers");
+return false;
+}
+}
+</script>
+<body>
+<form name="myform" action="welcome.html" onSubmit="return valid()">
+enter a number<input type="text" name="num">
+<input type="submit" value="submit">
+</form>
+</body>
+</html>

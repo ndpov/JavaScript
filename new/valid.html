@@ -1,0 +1,152 @@
+<html>
+<head>
+
+</head>
+<body>
+<script type="text/javascript">
+var re = /[^0-9]*/;
+var reg=/[^0-9]*/;
+function mysubmit()
+{
+var fname=document.myform.fn.value;
+var ok = re.test(fname);
+if(!ok)
+{
+alert("please enter first name without numerics");
+}
+
+var lname=document.myform.ln.value;
+var lasn=re.test(lname);
+if(!lasn)
+{
+alert("please enter last name without numerics");
+
+}
+var email=document.myform.em.value;
+if(email==null||email=="")
+{
+alert("please enter email");
+return false;
+}
+var remail=document.myform.rem.value;
+if(remail==null||remail=="")
+{
+alert("please re-enter your email");
+return false;
+}
+var pass=document.myform.pwd.value;
+if(pass==null||pass=="")
+{
+alert("please enter password");
+return false;
+}
+
+var rb=document.myform.radiobutton.value;
+if(rb==null||rb=="")
+{
+alert("please select your gender");
+return false;
+}
+var mob=document.myform.mn.value;
+if(mob=null||mob=="")
+{
+alert("please enter mobile number");
+return false;
+}
+
+}
+</script>
+<h1> User Registration Form</h1>
+<font size=3>     Form validation using java script</font><br><br>
+<form name="myform" action="welcome.html" onsubmit="return mysubmit()">
+<input type="text" name="fn" placeholder="firstname"><br><br>
+<input type="text" name="ln" placeholder="lastname"><br><br>
+<input type="text" name="em" placeholder="email"><br><br>
+<input type="text" name="rem" placeholder="re-enter email"><br><br>
+<input type="password" name="pwd" placeholder="enter password"><br><br>
+<input type="text" name="mn" placeholder="+91"><br><br>
+
+<div>
+<h5 class="bday">Birthday</h5>
+</div>
+<div>
+<select name="birthday_day" >
+          <option value="" >Day</option>
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+		  <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+		  <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+		  <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+		  <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+		  <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+		   <option value="31">31</option>
+</select>
+<select name="month">
+<option value="" >month</option>
+<option value="jan" selected>january</option>
+<option value="feb">february</option>
+<option value="mar">march</option>
+<option value="apr">april</option>
+<option value="may">may</option>
+<option value="jun">june</option>
+<option value="jul">july</option>
+<option value="aug">august</option>
+<option value="sep">september</option>
+<option value="oct">october</option>
+<option value="nov">november</option>
+<option value="dec">december</option>
+</select>
+
+
+<select name="year">
+<option value="" >year</option>
+<option value="1985" selected>1985</option>
+<option value="1986">1986</option>
+<option value="1987">1987</option>
+<option value="1988">1988</option>
+<option value="1989">1989</option>
+<option value="1990">1990</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+</select><br><br>
+</div>
+<div id="radiobutton">
+<input type="radio" name="radiobutton" value="male"><label>Male</label>
+<input type="radio" name="radiobutton" value="female"><label>Female</label>
+</div><br>
+
+<div>
+<input type="submit" value="signup"> </input>
+</div>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<script>
+function valid()
+{
+var uname=document.myform.un.value;
+var pwd=document.myform.pw.value;
+if(uname==null||uname=="")
+{
+alert("user name is mandatory");
+return false;
+}
+else if(pwd==null||pwd==""||pwd.length<6)
+{
+alert("password is mandatory");
+return false;
+}
+else
+alert("login succesful");
+}
+</script>
+<body>
+<form name="myform" onSubmit="return valid()">
+username<input type="text" Required><br><br>
+password<input type="password" name="pw"><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
